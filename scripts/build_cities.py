@@ -26,7 +26,7 @@ except Exception as e:  # network trouble: fall back to the small bundled list s
     sys.exit(0)
 
 admin1 = {}
-for line in admin_txt.decode("utf-8").splitlines():
+for line in admin_txt.splitlines():
     parts = line.split("\t")
     if len(parts) >= 2:
         admin1[parts[0]] = parts[1]
